@@ -9,6 +9,8 @@ import Taskbar from '@/components/System/Taskbar/Taskbar';
 import IconsView from '@/components/System/FileManager/IconsView';
 import WindowManager from '@/components/System/WindowManager/WindowManager';
 
+import Warning from '@/components/warning';
+
 export default function HomePage(): ReactElement {
     return (
         <>
@@ -17,6 +19,7 @@ export default function HomePage(): ReactElement {
                 <ProcessProvider>
                     <FileProvider>
                         <Desktop>
+                            <Warning />
                             <FileManager path="/desktop" render={IconsView} />
                             <WindowManager />
                             <Taskbar />
