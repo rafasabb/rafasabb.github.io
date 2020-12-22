@@ -16,7 +16,9 @@ $close: rgb(255, 85, 78);
 $close_active: rgb(191, 64, 59);
 $close_text: rgb(153, 0, 0);
 
-$textShadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.75), 0 1px 3px rgb(0, 0, 0), 0 1px 3px rgb(0, 0, 0);
+$textShadow: 0 1px 1px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(0, 0, 0, 0.5),
+  0 1px 2px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.75),
+  0 1px 3px rgb(0, 0, 0), 0 1px 3px rgb(0, 0, 0);
 
 $thickLine: 2px;
 
@@ -27,7 +29,8 @@ $zindexLevelSize: 100;
 $iconsZindexLevel: 1;
 $windowsZindexLevel: 2;
 $taskbarZindexLevel: 3;
-$foregroundZindex: ($baseZindex + $windowsZindexLevel * $zindexLevelSize) +($zindexLevelSize / 2);
+$foregroundZindex: ($baseZindex + $windowsZindexLevel * $zindexLevelSize) +
+  ($zindexLevelSize / 2);
 
 $taskbarEntryWidth: 160px;
 $titlebarHeight: 22px;

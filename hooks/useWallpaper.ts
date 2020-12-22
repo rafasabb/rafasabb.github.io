@@ -1,4 +1,5 @@
-import WAVES from '@/public/libs/vanta.waves.min';
+//import WAVES from '@/public/libs/vanta.waves.min';
+import RINGS from '@/public/libs/vanta.rings.min';
 
 import type { WallpaperEffect } from '@/types/components/System/Wallpaper';
 
@@ -13,7 +14,7 @@ const wallpaperColor = (h: number): number =>
 const fps = 20;
 const updateIntervalInMilliseconds = MILLISECONDS_IN_SECOND / fps;
 const initialColor = 200;
-const vantaJsSettings = {
+const vantaJsSettingsWaves = {
   gyroControls: false,
   mouseControls: false,
   touchControls: false,
@@ -22,6 +23,14 @@ const vantaJsSettings = {
   waveHeight: 15,
   waveSpeed: 0.25,
   zoom: 0.95
+};
+const vantaJsSettingsRings = {
+  gyroControls: false,
+  mouseControls: false,
+  touchControls: false,
+  color: wallpaperColor(initialColor),
+  backgroundColor: '#202428',
+  scale: 0.95
 };
 
 const initRainbowEffect = (wallpaperEffect: WallpaperEffect): (() => void) => {
@@ -53,10 +62,10 @@ const initRainbowEffect = (wallpaperEffect: WallpaperEffect): (() => void) => {
 const renderWallpaperEffect = ({
   current: renderElement
 }: React.RefObject<HTMLElement>): WallpaperEffect => {
-  const wallpaperEffect = WAVES({
+  const wallpaperEffect = RINGS({
     el: renderElement,
     THREE,
-    ...vantaJsSettings
+    ...vantaJsSettingsRings
   });
   const cancelRainbowEffect = initRainbowEffect(wallpaperEffect);
 
